@@ -48,7 +48,7 @@ def restaurants():
             'name': restaurant.name,
             'address': restaurant.address
         }
-        restaurant_list.append(restaurant_desc)
+        restaurant_list.append(restaurant_descr)
 
     if restaurant_list:
         return jsonify(restaurant_list), 200
@@ -63,11 +63,11 @@ def restaurants():
 def pizzas():
     pizza_list = []
     for pizza in Pizza.query.all():
-        pizza_desc = {
+        pizza_descr = {
             'name': pizza.name,
             'ingredients': pizza.ingredients
         }
-        pizza_list.append(pizza_desc)
+        pizza_list.append(pizza_descr)
 
     return jsonify(pizza_list), 200
 
