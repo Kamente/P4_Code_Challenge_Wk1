@@ -1,4 +1,5 @@
-from flask_slqalchemy import SQLAlchemy
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
@@ -14,7 +15,7 @@ class Restaurant(db.Model):
 class Pizza(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
-    ingredients = db.Column(db.string(255), nullable=False)
+    ingredients = db.Column(db.String(255), nullable=False)
 
     restaurants = db.relationship('Restaurant', backref='pizzas', lazy=True)
 
