@@ -10,15 +10,15 @@ app.app_context().push()
 
 db.create_all()
 
-restaurant1 = Restaurant(name="Dominos", address="Kahawa Sukari")
-restaurant2 = Restaurant(name="Pizza Inn", address="Kasarani")
+restaurant1 = Restaurant(name="Dominion Pizza", address="Good Italian, Ngong Road, 5th Avenue")
+restaurant2 = Restaurant(name="Pizza Hut", address="Westgate Mall, Mwanzi Road, Nrb 100")
 
 db.session.add_all([restaurant1, restaurant2])
 
 db.session.commit()
 
-pizza1 = Pizza(name="Pepperoni", ingredients="cheese, sauce, pepperoni")
-pizza2 = Pizza(name="Meat Deluxe", ingredients="BBQ, sauce, dough")
+pizza1 = Pizza(name="Cheese", ingredients="Dough, Tomato Sauce, Cheese")
+pizza2 = Pizza(name="Pepperoni", ingredients="Dough, Tomato Sauce, Cheese, Pepperoni")
 
 db.session.add_all([pizza1, pizza2])
 
