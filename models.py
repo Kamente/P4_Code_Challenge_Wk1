@@ -8,7 +8,8 @@ class Restaurant(db.Model):
     name = db.Column(db.String(50), unique=True, nullable=False)
     address = db.Column(db.String(100), nullable=False)
 
-    pizzas = db.relationship('Pizza', secondary='restaurant_pizza', back_populates='restaurants')
+    restaurant_pizzas = db.relationship(
+        'RestaurantPizza', backref='restaurant', lazy=True)
 
 
 class Pizza(db.Model):
@@ -16,7 +17,8 @@ class Pizza(db.Model):
     name = db.Column(db.String(50), nullable=False)
     ingredients = db.Column(db.String(255), nullable=False)
 
-    restaurants = db.relationship('Restaurant', secondary='restaurant_pizza', back_populates='pizzas')
+    restaurant_pizzas = db.relationship(
+        'RestaurantPizza', backref='pizza', lazy=True)
 
 
 class RestaurantPizza(db.Model):
