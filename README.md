@@ -12,7 +12,8 @@ KAMENTE JUSTIN
 ### Building a Flask API
 
 ```
-Building a Flask API and applying the HTTP methods to test the running Flask Server and the requests making
+Building a Flask API and applying the HTTP methods to test the running Flask Server and 
+the requests making
 HTTP methods used:
 - GET
 - DELETE
