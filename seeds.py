@@ -1,3 +1,5 @@
+# Hey,don't mind this. i just used to test the working of my database
+
 from flask import Flask
 from models import db, Restaurant, Pizza, RestaurantPizza
 
