@@ -111,7 +111,7 @@ def create_restaurant_pizza():
 
 
 # added methods to add data into the restaurant and pizza tables:
-
+# can assume it
 @app.route('/restaurants', methods=['POST'])
 def add_new_restaurant():
     data = request.get_json()
