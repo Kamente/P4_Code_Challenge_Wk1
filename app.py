@@ -43,8 +43,6 @@ def get_restaurants():
         # 404 response to indicate failure to get the restaurant
         return jsonify({'error': "Restaurant not found"}), 404
 
-# Route to get a restaurant by ID
-
 
 @app.route('/restaurants/<int:id>', methods=['GET'])
 def get_restaurant_by_id(id):
