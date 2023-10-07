@@ -8,6 +8,8 @@ flask = "*"
 requests = "*"
 flask-sqlalchemy = "*"
 flask-jwt-extended = "*"
+flask-migrate = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
