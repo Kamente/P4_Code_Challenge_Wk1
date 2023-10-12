@@ -14,7 +14,6 @@ load_dotenv()
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('dburl')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 migrate = Migrate(app, db)
 
 db.init_app(app)
@@ -69,7 +68,9 @@ def delete_restaurant(id):
         RestaurantPizza.query.filter_by(restaurant_id=id).delete()
         db.session.delete(restaurant)
         db.session.commit()
-        return '', 204  # Return 204 for a successful deletion
+        return {
+            "message": "Restaurant deleted successfully"
+        }
     else:
         return jsonify({'error': "Restaurant not found"}), 404
 
